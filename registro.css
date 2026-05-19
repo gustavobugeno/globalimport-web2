@@ -1,0 +1,156 @@
+.registro-contenedor {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.registro-contenedor h1 {
+  text-align: center;
+  color: var(--azul);
+  margin-bottom: 30px;
+}
+
+.formulario-registro {
+  background-color: var(--blanco);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.15);
+}
+
+.form-seccion {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: var(--gris);
+  border-left: 5px solid var(--celeste);
+  border-radius: 10px;
+}
+
+.form-seccion h2 {
+  color: var(--azul);
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.grid-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo-completo {
+  grid-column: span 2;
+}
+
+label {
+  font-weight: bold;
+  color: var(--azul);
+}
+
+input,
+select,
+textarea {
+  padding: 12px;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--celeste);
+  box-shadow: 0 0 8px rgba(30, 136, 229, 0.4);
+}
+
+.campo-error {
+  border-color: red;
+}
+
+.campo-ok {
+  border-color: green;
+}
+
+.opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.opciones label {
+  font-weight: normal;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.btn-principal,
+.btn-secundario {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-principal {
+  background-color: var(--celeste);
+  color: white;
+}
+
+.btn-secundario {
+  background-color: #6b7280;
+  color: white;
+}
+
+.btn-principal:hover {
+  background-color: #1565c0;
+}
+
+.btn-secundario:hover {
+  background-color: #4b5563;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-link a {
+  color: var(--celeste);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .grid-form {
+    grid-template-columns: 1fr;
+  }
+
+  .campo-completo {
+    grid-column: span 1;
+  }
+
+  .botones {
+    flex-direction: column;
+  }
+
+  .btn-principal,
+  .btn-secundario {
+    width: 100%;
+  }
+}

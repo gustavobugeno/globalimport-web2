@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - GlobalImport S.A.</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="registro.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">GlobalImport S.A.</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="index.html#contacto">Contacto</a>
+      <a href="registro.html">Registro</a>
+    </nav>
+  </header>
+
+  <main class="registro-contenedor">
+    <h1>Registro de Usuario</h1>
+
+    <form class="formulario-registro">
+
+      <section class="form-seccion">
+        <h2>Datos Personales</h2>
+
+        <div class="grid-form">
+          <div class="campo">
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+
+          <div class="campo">
+            <label for="fechaNacimiento">Fecha de nacimiento *</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+          </div>
+
+          <div class="campo">
+            <label for="rut">Rut / Número de documento *</label>
+            <input type="text" id="rut" name="rut" required>
+          </div>
+
+          <div class="campo">
+            <label for="genero">Género *</label>
+            <select id="genero" name="genero" required>
+              <option value="">Seleccione una opción</option>
+              <option>Masculino</option>
+              <option>Femenino</option>
+              <option>No binario</option>
+              <option>Prefiero no decir</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="nacionalidad">Nacionalidad *</label>
+            <select id="nacionalidad" name="nacionalidad" required>
+              <option value="">Seleccione un país</option>
+              <option>Chile</option>
+              <option>Argentina</option>
+              <option>Perú</option>
+              <option>Bolivia</option>
+              <option>Colombia</option>
+              <option>Venezuela</option>
+              <option>Brasil</option>
+              <option>México</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-seccion">
+        <h2>Datos de Contacto y Acceso</h2>
+
+        <div class="grid-form">
+          <div class="campo">
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="campo">
+            <label for="confirmarEmail">Confirmar correo electrónico *</label>
+            <input type="email" id="confirmarEmail" name="confirmarEmail" required>
+          </div>
+
+          <div class="campo">
+            <label for="password">Contraseña *</label>
+            <input type="password" id="password" name="password" required>
+            <small>Debe incluir mayúscula, número y carácter especial.</small>
+          </div>
+
+          <div class="campo">
+            <label for="confirmarPassword">Confirmar contraseña *</label>
+            <input type="password" id="confirmarPassword" name="confirmarPassword" required>
+          </div>
+
+          <div class="campo">
+            <label for="telefono">Teléfono *</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678" required>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-seccion">
+        <h2>Dirección de Entrega</h2>
+
+        <div class="grid-form">
+          <div class="campo">
+            <label for="pais">País *</label>
+            <select id="pais" name="pais" required>
+              <option value="">Seleccione un país</option>
+              <option>Chile</option>
+              <option>Argentina</option>
+              <option>Perú</option>
+              <option>Bolivia</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="provincia">Provincia / Estado *</label>
+            <input type="text" id="provincia" name="provincia" required>
+          </div>
+
+          <div class="campo">
+            <label for="ciudad">Ciudad *</label>
+            <input type="text" id="ciudad" name="ciudad" required>
+          </div>
+
+          <div class="campo">
+            <label for="calle">Calle y número *</label>
+            <input type="text" id="calle" name="calle" required>
+          </div>
+
+          <div class="campo">
+            <label for="codigoPostal">Código postal *</label>
+            <input type="text" id="codigoPostal" name="codigoPostal" required>
+          </div>
+
+          <div class="campo">
+            <label for="departamento">Piso y departamento</label>
+            <input type="text" id="departamento" name="departamento">
+          </div>
+
+          <div class="campo campo-completo">
+            <label for="referencia">Referencia o instrucciones adicionales</label>
+            <textarea id="referencia" name="referencia" maxlength="200"></textarea>
+            <small>Máximo 200 caracteres.</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-seccion">
+        <h2>Preferencias y Términos</h2>
+
+        <div class="campo">
+          <label>Categorías de interés *</label>
+          <div class="opciones">
+            <label><input type="checkbox" name="categorias" value="electronica"> Electrónica</label>
+            <label><input type="checkbox" name="categorias" value="indumentaria"> Indumentaria</label>
+            <label><input type="checkbox" name="categorias" value="hogar"> Hogar</label>
+            <label><input type="checkbox" name="categorias" value="otros"> Otros</label>
+          </div>
+        </div>
+
+        <div class="campo">
+          <label>Tipo de cliente *</label>
+          <div class="opciones">
+            <label><input type="radio" name="tipoCliente" value="consumidor" required> Consumidor final</label>
+            <label><input type="radio" name="tipoCliente" value="revendedor"> Revendedor</label>
+            <label><input type="radio" name="tipoCliente" value="empresa"> Empresa</label>
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="comoConociste">¿Cómo nos conociste?</label>
+          <select id="comoConociste" name="comoConociste">
+            <option value="">Seleccione una opción</option>
+            <option>Redes sociales</option>
+            <option>Recomendación</option>
+            <option>Búsqueda web</option>
+            <option>Publicidad</option>
+            <option>Otro</option>
+          </select>
+        </div>
+
+        <div class="campo opciones">
+          <label><input type="checkbox" name="newsletter"> Suscribirme al newsletter</label>
+          <label><input type="checkbox" id="terminos" name="terminos" required> Acepto los <a href="#">Términos y Condiciones</a> *</label>
+          <label><input type="checkbox" id="privacidad" name="privacidad" required> Acepto la <a href="#">Política de Privacidad</a> *</label>
+        </div>
+      </section>
+
+      <div class="botones">
+        <button type="submit" class="btn-principal">Registrarme</button>
+        <button type="reset" class="btn-secundario">Limpiar formulario</button>
+      </div>
+
+      <p class="login-link">
+        <a href="#">Ya tengo cuenta, iniciar sesión</a>
+      </p>
+
+    </form>
+  </main>
+
+</body>
+</html>
