@@ -1,0 +1,192 @@
+:root {
+  --azul: #0b2545;
+  --celeste: #1e88e5;
+  --gris: #f4f6f8;
+  --blanco: #ffffff;
+  --texto: #222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--texto);
+  background-color: var(--gris);
+}
+
+.navbar {
+  width: 100%;
+  background-color: var(--azul);
+  color: var(--blanco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: var(--celeste);
+}
+
+.hero {
+  width: 100%;
+  min-height: 80vh;
+  background: linear-gradient(rgba(11, 37, 69, 0.75), rgba(11, 37, 69, 0.75)),
+    url("assets/images/banner-importacion.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--blanco);
+  padding: 40px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background-color: var(--celeste);
+  color: var(--blanco);
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #1565c0;
+}
+
+.servicios {
+  padding: 60px 8%;
+  text-align: center;
+  background-color: var(--blanco);
+}
+
+.servicios h2,
+.elegirnos h2 {
+  font-size: 32px;
+  margin-bottom: 35px;
+  color: var(--azul);
+}
+
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.card {
+  background-color: var(--gris);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+.icono {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: var(--azul);
+  margin-bottom: 10px;
+}
+
+.elegirnos {
+  padding: 60px 8%;
+  text-align: center;
+}
+
+.puntos {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.puntos div {
+  background-color: var(--blanco);
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+footer {
+  background-color: var(--azul);
+  color: var(--blanco);
+  text-align: center;
+  padding: 25px;
+}
+
+footer a {
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--celeste);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .grid-servicios {
+    grid-template-columns: 1fr;
+  }
+
+  .puntos {
+    flex-direction: column;
+  }
+
+  .puntos div {
+    width: 100%;
+  }
+}
